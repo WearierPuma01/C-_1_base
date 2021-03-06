@@ -140,11 +140,13 @@ namespace C_1_base
 
         public static int Fibonachi(int n)
         {
-            int a=0;
-            if (n>1)
-            Fibonachi(n - 1);
-            a += n;
-            return a;
+
+            if (n == 1)
+                return 1;
+            if (n == 2)
+                return 2;
+            
+            return Fibonachi(n-1)+Fibonachi(n-2);
         }
         #endregion
 
